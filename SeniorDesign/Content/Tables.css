@@ -1,0 +1,26 @@
+﻿/* Styles for tables in the Project Status page
+----------------------------------------------------------*/
+table
+{
+	text-align: center;	
+}
+
+td.yellow 
+{
+	background: Yellow;
+}
+
+td.green
+{
+	background: Green;
+	color: White;	
+}
+
+table.future 
+{
+	filter:alpha(opacity=20);
+    -moz-opacity:0.2;
+    -khtml-opacity: 0.2;
+    opacity: 0.2;
+
+}

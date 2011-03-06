@@ -1,0 +1,5 @@
+c:\Users\Henry\Documents\Visual Studio 2010\Projects\SeniorDesign\SeniorDesign\obj\Debug\ResolveAssemblyReference.cache
+c:\Users\Henry\Documents\Visual Studio 2010\Projects\SeniorDesign\SeniorDesign\bin\SeniorDesign.dll
+c:\Users\Henry\Documents\Visual Studio 2010\Projects\SeniorDesign\SeniorDesign\bin\SeniorDesign.pdb
+c:\Users\Henry\Documents\Visual Studio 2010\Projects\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.dll
+c:\Users\Henry\Documents\Visual Studio 2010\Projects\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.pdb

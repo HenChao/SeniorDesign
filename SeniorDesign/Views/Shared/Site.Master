@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="<%: Url.Content("~/Scripts/jquery-1.4.4.min.js") %>" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server" />
+</head>
+
+<body>
+    <div id="header">
+        <div id="logindisplay">
+            <% Html.RenderPartial("LogOnUserControl"); %>
+        </div> 
+            
+        <img src="../../Content/images/CSLogo.png" style="float:left;"/>
+        <div id="menucontainer">
+            <ul id="menu">              
+                <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
+                <li><%: Html.ActionLink("About Us", "About", "Home")%></li>
+                <li><%: Html.ActionLink("Project Status", "Project", "Home")%></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page">
+
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
