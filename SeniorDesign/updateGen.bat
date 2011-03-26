@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\SvcUtil.exe" http://ethiele.com/CostSplit/Service.svc /out:gen.cs /noConfig
