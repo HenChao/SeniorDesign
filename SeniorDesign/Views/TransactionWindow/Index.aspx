@@ -35,9 +35,8 @@
     
         <tr>
             <td>
-                <%= Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
-                <%= Html.ActionLink("Details", "Details", new { id=item.Id })%> |
-                <%= Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })%>
+                <%= Html.ActionLink("Summery", "Details", new { id=item.Id })%> |
+                <%= Html.ActionLink("Expenses", "Index", "Expense", new { /* id=item.PrimaryKey */ }, null)%>
             </td>
             <td>
                 <%= Html.Encode(String.Format("{0:g}", item.StartDate)) %>

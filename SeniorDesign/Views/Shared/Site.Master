@@ -23,7 +23,6 @@
                 <li><%: Html.ActionLink("About Us", "About", "Home")%></li>
                 <li><%: Html.ActionLink("Project Status", "Project", "Home")%></li>
                 <li><%: Html.ActionLink("Groups", "Index", "Group")%></li>
-                <li><%: Html.RouteLink("Groups", "GroupFunctions", new { Controler = "Group" })%></li>
             </ul>
         </div>
     </div>

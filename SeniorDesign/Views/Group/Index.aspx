@@ -26,8 +26,7 @@
     
         <tr>
             <td>
-                <%= Html.ActionLink("Edit", "Edit", new { id = item.Id /* id=item.PrimaryKey */ }) %> |
-                <%= Html.ActionLink("Delete", "Delete", new { id = item.Id  /* id=item.PrimaryKey */ })%>
+                <%= Html.ActionLink("Select", "Index", "TransactionWindow", new { group = item.Id }, null)%>
             </td>
             <td>
                 <%= Html.Encode(item.Description) %>
