@@ -134,6 +134,7 @@
     <Content Include="Views\SubExpense\Delete.aspx" />
     <Content Include="Views\Transactions\Index.aspx" />
     <Content Include="Views\TransactionWindow\Create.aspx" />
+    <Content Include="Views\TransactionWindow\Details.aspx" />
     <Content Include="Views\TransactionWindow\Index.aspx" />
     <Content Include="Views\Users\ChangePassword.aspx" />
     <Content Include="Views\Users\Create.aspx" />

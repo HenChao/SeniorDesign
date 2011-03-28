@@ -16,8 +16,8 @@ namespace SeniorDesign.Controllers
             ServiceClient sc = Sas.GetAuthenticatedServiceClient(this, action);
             if (sc != null)
             {
-                PagedDataOfGroupInfo groups = sc.GetAllGroups(new PagedDataRequest() { StartRow = 0, EndRow = 10000 });
-                return View(groups.Data);
+                //PagedDataOfGroupInfo groups = sc.GetAllGroups(new PagedDataRequest() { StartRow = 0, EndRow = 10000 });
+                return View(sc.GetGroupsForUser(((UserInfo)Session["UserId"]).Id));
             }
             else
             {

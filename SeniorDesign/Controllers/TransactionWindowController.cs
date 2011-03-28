@@ -21,9 +21,16 @@ namespace SeniorDesign.Controllers
         //
         // GET: /TransactionWindow/Details/5
 
-        public ActionResult Details(int id)
+        public ActionResult Details(int id, int group, string action)
         {
-            return View();
+            ServiceClient sc = Sas.GetAuthenticatedServiceClient(this, action);
+            SeniorDesign.Models.UserTransactionData utd = new Models.UserTransactionData()
+            {
+                Costs = sc.GetSplitCosts(group, -1, id).ToList(),
+                Payments = sc.GetSplitPayments(group, -1, id).ToList(),
+                WindowInfo = sc.GetTransactionWindow(id, group)
+            };
+            return View(utd);
         }
 
         //

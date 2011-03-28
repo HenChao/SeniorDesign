@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace SeniorDesign.Controllers
 {
@@ -37,8 +38,10 @@ namespace SeniorDesign.Controllers
             if (auth)
             {
                 Session["AuthStatus"] = true;
-                Session["UserId"] = sc.CurrentUser();
+                var remoteUsr = sc.CurrentUser();
+                Session["UserId"] = remoteUsr;
                 creds.CredStatusFailed = false;
+                FormsAuthentication.SetAuthCookie(remoteUsr.Username, false);
                 if ((Session["LoginRedirectUrl"] != null))
                 {
                     Response.Redirect(Session["LoginRedirectUrl"].ToString());
