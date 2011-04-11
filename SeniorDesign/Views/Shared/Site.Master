@@ -16,13 +16,15 @@
             <% Html.RenderPartial("LogOnUserControl"); %>
         </div> 
             
-        <img src="../../Content/images/CSLogo.png" style="float:left;"/>
+        <img src="~/Content/images/CSLogo.png" style="float:left;" runat="server"/>
         <div id="menucontainer">
             <ul id="menu">              
                 <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
                 <li><%: Html.ActionLink("About Us", "About", "Home")%></li>
                 <li><%: Html.ActionLink("Project Status", "Project", "Home")%></li>
                 <li><%: Html.ActionLink("Groups", "Index", "Group")%></li>
+                <li><%: Html.ActionLink("Users", "Index", "Users")%></li>
+                <li><%: Html.ActionLink("Login", "Index", "Login")%></li>
             </ul>
         </div>
     </div>

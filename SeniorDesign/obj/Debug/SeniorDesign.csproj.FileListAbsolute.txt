@@ -8,3 +8,8 @@ C:\Users\ethiele\Documents\Visual Studio 2010\Projects\HCClient\SeniorDesign\Sen
 C:\Users\ethiele\Documents\Visual Studio 2010\Projects\HCClient\SeniorDesign\SeniorDesign\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\ethiele\Documents\Visual Studio 2010\Projects\HCClient\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.dll
 C:\Users\ethiele\Documents\Visual Studio 2010\Projects\HCClient\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.pdb
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\SeniorDesign.dll
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\SeniorDesign.pdb
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.dll
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.pdb

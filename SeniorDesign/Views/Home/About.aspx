@@ -11,10 +11,10 @@
     <ul style="list-style: none;">
         <li style="padding-bottom: 30px; padding-top: 30px;">
             <img src="../../Content/images/profiles/fawkes.jpg" style="float: left; margin-right:62px;"/>
-            <h4>EJ Thiele</h4>
+            <h4>Edward Thiele</h4>
             <p>
-            Some say he only sleeps 2 hours a day, and naps for the other 22 hours. Others claim that he prefers
-            to code drunk... but can never find enough alcohol. All we know is his name: EJ Thiele.
+            Some say he only sleeps 2 hours a day, and naps for the other 22 hours. Others claim that he once
+            killed a yak from 200 yards away with mind bullets. All we know is his name: Edward Thiele.
             </p>
 
             <p><a href="mailto:webmaster@costsplit.com">webmaster@costsplit.com</a></p>
