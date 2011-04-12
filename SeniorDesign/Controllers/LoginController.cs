@@ -61,6 +61,5 @@ namespace SeniorDesign.Controllers
             
             return View(creds);
         }
-
     }
 }

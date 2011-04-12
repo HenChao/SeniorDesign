@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<UserInfo>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+	Users Managment
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Index</h2>
+    <h2>Users Managment</h2>
 
     <table>
         <tr>
@@ -34,8 +34,8 @@
             <td>
                 <%= Html.ActionLink("Edit", "Edit", new { id = item.Id /* id=item.PrimaryKey */ })%> |
                 <%= Html.ActionLink("Details", "Details", new { id = item.Id /* id=item.PrimaryKey */ })%> |
-                <%= Html.ActionLink("Delete", "Delete", new { id = item.Id /* id=item.PrimaryKey */ })%>
-                <%= Html.ActionLink("Change Password", "ChangePassword", new { id=item.Id /* id=item.PrimaryKey */ })%>
+                <%= Html.ActionLink("Delete", "Delete", new { id = item.Id /* id=item.PrimaryKey */ })%> |
+                <%= Html.ActionLink("Change Password", "ChangePassword", new { id=item.Id /* id=item.PrimaryKey */ })%> |
                 <%= Html.ActionLink("Permissions", "Index", "Permission", new { id=item.Id /* id=item.PrimaryKey */ }, null)%>
             </td>
             <td>
@@ -59,7 +59,7 @@
 
     </table>
 
-    <p>
+    <p class="button">
         <%= Html.ActionLink("Create New", "Create") %>
     </p>
 

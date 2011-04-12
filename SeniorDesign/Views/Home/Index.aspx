@@ -32,4 +32,9 @@
         to take a look around!
     </p>
 
+    <p>
+        User accounts are current available on an invitation-only basis. In a later release of the website, we hope to eventually
+        support beta user accounts.
+    </p>
+
 </asp:Content>

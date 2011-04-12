@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="HeaderContent" runat="server">
-    <link href="../../Content/Tables.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Tables.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -26,12 +26,12 @@
     <tr>
         <td>February 11th</td>
         <td>Database Schema and UML Diagrams</td>
-        <td class="yellow">In Progress</td>
+        <td class="green">Complete</td>
     </tr>
     <tr>
         <td>February 11th</td>
         <td>Basic Desktop Application</td>
-        <td class="yellow">In Progress</td>
+        <td class="green">Complete</td>
     </tr>
     <tr>
         <td>February 11th</td>
@@ -41,7 +41,7 @@
     <tr>
         <td>February 11th</td>
         <td>Create code repository on GitHub</td>
-        <td class="yellow">In Progress</td>
+        <td class="green">Complete</td>
     </tr>
 </table>
 
@@ -56,22 +56,22 @@
     <tr>
         <td>February 25th</td>
         <td>Database Schema - Revision</td>
-        <td>Not even close</td>
+        <td class="green">Complete</td>
     </tr>
     <tr>
         <td>February 25th</td>
         <td>Advanced Desktop Application</td>
-        <td>Not even close</td>
+        <td class="green">Complete</td>
     </tr>
     <tr>
         <td>February 25th</td>
         <td>Advanced Website Application</td>
-        <td>Not even close</td>
+        <td class="green">Complete</td>
     </tr>
     <tr>
         <td>Program Refinement</td>
         <td>Create code repository on GitHub</td>
-        <td>Not even close</td>
+        <td class="green">Complete</td>
     </tr>
 </table>
 
@@ -86,17 +86,17 @@
     <tr>
         <td>April 15th</td>
         <td>Preliminary Mobile Website</td>
-        <td>Not even close</td>
+        <td class="green">Complete</td>
     </tr>
     <tr>
         <td>April 29th</td>
         <td>Advanced Mobile Website</td>
-        <td>Not even close</td>
+        <td class="yellow">In Progress</td>
     </tr>
     <tr>
         <td>May 6th</td>
         <td>Final Deliverable</td>
-        <td>Not even close</td>
+        <td class="yellow">Almost there</td>
     </tr>
 </table>
 

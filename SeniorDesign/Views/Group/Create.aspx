@@ -12,11 +12,14 @@
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Form</legend>
              
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Name) %>
             </div>
+            <p class="comment">
+                Enter a name for your group.
+            </p>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.Name) %>
                 <%= Html.ValidationMessageFor(model => model.Name) %>
@@ -25,6 +28,9 @@
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Description) %>
             </div>
+            <p class="comment">
+                Provide a short description to help you remember the purpose of this group.
+            </p>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.Description) %>
                 <%= Html.ValidationMessageFor(model => model.Description) %>
@@ -38,9 +44,9 @@
 
     <% } %>
 
-    <div>
+    <p class="button">
         <%= Html.ActionLink("Back to List", "Index") %>
-    </div>
+    </p>
 
 </asp:Content>
 

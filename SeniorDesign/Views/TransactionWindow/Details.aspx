@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h1>
+    <h1 style="float: none;">
         Transaction report for: 
         <%= Model.WindowInfo.Name %>
     </h1>
@@ -19,10 +19,11 @@
         <% }
            else
            { %>
-           ?
+           Present
         <% } %>
     </h2>
-    <h3>Summery</h3>
+
+    <h3>Summary</h3>
     <table>
         <tr>
             <th>
@@ -227,6 +228,10 @@
         <h6>
         Total: <%= String.Format("{0:C}",  Model.Payments.Sum(p => p.Amount)) %>
     </h6>
+        
+    <p class="button">
+        <%= Html.ActionLink("Back To Transactions", "Index", "TransactionWindow") %>
+    </p>
 
 
 <%--<h2>Details</h2>

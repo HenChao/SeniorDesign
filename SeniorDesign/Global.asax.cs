@@ -30,7 +30,7 @@ namespace SeniorDesign
 
             routes.MapRoute("GroupFunctions",
                 "g.aspx/{group}/{controller}/{action}/{id}",
-                new { controller = "Home", action = "Index", id = -1 }
+                new { controller = "Home", action = "Index", id = -1}
            );
 
             routes.MapRoute(

@@ -13,3 +13,8 @@ C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\SeniorDes
 C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.dll
 C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.pdb
+C:\Users\Henry\Documents\4th Year\Senior Design\git\SeniorDesign\SeniorDesign\bin\SeniorDesign.dll
+C:\Users\Henry\Documents\4th Year\Senior Design\git\SeniorDesign\SeniorDesign\bin\SeniorDesign.pdb
+C:\Users\Henry\Documents\4th Year\Senior Design\git\SeniorDesign\SeniorDesign\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Henry\Documents\4th Year\Senior Design\git\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.dll
+C:\Users\Henry\Documents\4th Year\Senior Design\git\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.pdb

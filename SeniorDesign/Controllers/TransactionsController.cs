@@ -18,6 +18,7 @@ namespace SeniorDesign.Controllers
             utd.Costs = sc.GetSplitCosts(group, -1, id).ToList();
             utd.Payments = sc.GetSplitPayments(group, -1, id).ToList();
             utd.WindowInfo = sc.GetTransactionWindow(id, group);
+
             return View(utd);
         }
 

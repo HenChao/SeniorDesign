@@ -35,8 +35,10 @@
             <td>
             <% if (Model.Status == 0)
                { // Created  %>
-                    <%= Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })%> |
+                    <p class="smallbutton">
+                    <%= Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })%>
                     <%= Html.ActionLink("Delete", "Delete", "SubExpense", new { id = item.ID /* id=item.PrimaryKey */ }, null)%>
+                    </p>
                 <% } %>
             </td>
             <td>
@@ -69,7 +71,7 @@
 
     </table>
 
-    <p>
+    <p class="smallbutton">
         <%= Html.ActionLink("Create New", "Create", "SubExpense", new { id = Model.ID }, null)%>
     </p>
 

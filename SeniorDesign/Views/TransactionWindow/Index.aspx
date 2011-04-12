@@ -1,42 +1,54 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<TransactionWindowInfo>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+	Transactions
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Index</h2>
+    <h2>All Transactions for: <%= Request.QueryString["Name"] %></h2>
+
+    <p>
+        Listed below are the transactions for this group.
+    </p>
 
     <table>
         <tr>
-            <th></th>
+            <th>
+                Transaction ID
+            </th>
+            <th>
+                Name
+            </th>
             <th>
                 Start Date
             </th>
             <th>
                 End Date
             </th>
-            <th>
-                Name
-            </th>
+            <th></th>
+            <!--
             <th>
                 IsClosed
             </th>
             <th>
                 IsPrimary
             </th>
-            <th>
-                Id
-            </th>
+            -->
          </tr>
 
     <% foreach (var item in Model) { %>
     
         <tr>
+            <td style="text-align: center; font-size:x-large;">
+                <%= Html.Encode(item.Id) %>
+            </td>
             <td>
-                <%= Html.ActionLink("Summery", "Details", new { id=item.Id })%> |
-                <%= Html.ActionLink("Expenses", "Index", "Expense", new { /* id=item.PrimaryKey */ }, null)%>
+                <% if (item.IsPrimary)
+                   {%>
+                    <img id="Img1" src="~/Content/images/primary.png" runat="server"/>
+                <% } %>
+                <%= Html.Encode(item.Name) %>
             </td>
             <td>
                 <%= Html.Encode(String.Format("{0:g}", item.StartDate)) %>
@@ -45,17 +57,17 @@
                 <%= Html.Encode(String.Format("{0:g}", item.EndDate)) %>
             </td>
             <td>
-                <%= Html.Encode(item.Name) %>
+                <p class="smallbutton"><%= Html.ActionLink("Summary", "Details", new { id=item.Id })%>
+                <%= Html.ActionLink("Expenses", "Index", "Expense", new { /* id=item.PrimaryKey */ }, null)%></p>
             </td>
+            <!--
             <td>
                 <%= Html.Encode(item.IsClosed) %>
             </td>
             <td>
                 <%= Html.Encode(item.IsPrimary) %>
             </td>
-            <td>
-                <%= Html.Encode(item.Id) %>
-            </td>
+            -->
         </tr>
     
     <% } %>
@@ -63,7 +75,12 @@
     </table>
 
     <p>
-        <%= Html.ActionLink("Create New", "Create") %>
+        Note: The <img id="Img2" src="~/Content/images/primary.png" runat="server"/> symbol indicates 
+        that this is your primary transaction.
+    </p>
+
+    <p class="button">
+        <%= Html.ActionLink("Add New Transaction", "Create") %>
     </p>
 
 </asp:Content>

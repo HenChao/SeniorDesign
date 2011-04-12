@@ -6,43 +6,43 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Details</h2>
+    <h2>About this expense:</h2>
 
     <fieldset>
-        <legend>Fields</legend>
+        <legend>Details</legend>
         
         <div class="display-label">Amount</div>
-        <div class="display-field"><%= Html.Encode(String.Format("{0:F}", Model.Amount)) %></div>
+        <p class="comment"><%= Html.Encode(String.Format("{0:F}", Model.Amount)) %></p>
         
-        <div class="display-label">DateEntered</div>
-        <div class="display-field"><%= Html.Encode(String.Format("{0:g}", Model.DateEntered)) %></div>
+        <div class="display-label">Date Entered</div>
+        <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateEntered)) %></p>
         
-        <div class="display-label">DateFinalized</div>
-        <div class="display-field"><%= Html.Encode(String.Format("{0:g}", Model.DateFinalized)) %></div>
+        <div class="display-label">Date Finalized</div>
+        <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateFinalized)) %></p>
         
-        <div class="display-label">DateOfExpense</div>
-        <div class="display-field"><%= Html.Encode(String.Format("{0:g}", Model.DateOfExpense)) %></div>
+        <div class="display-label">Date Of Expense</div>
+        <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateOfExpense)) %></p>
         
         <div class="display-label">Description</div>
-        <div class="display-field"><%= Html.Encode(Model.Description) %></div>
+        <p class="comment"><%= Html.Encode(Model.Description) %></p>
         
-        <div class="display-label">GroupID</div>
-        <div class="display-field"><%= Html.Encode(Model.GroupID) %></div>
+        <div class="display-label">Part of GroupID</div>
+        <p class="comment"><%= Html.Encode(Model.GroupID) %></p>
         
-        <div class="display-label">ID</div>
-        <div class="display-field"><%= Html.Encode(Model.ID) %></div>
+        <div class="display-label">Expense ID</div>
+        <p class="comment"><%= Html.Encode(Model.ID) %></p>
         
         <div class="display-label">Name</div>
-        <div class="display-field"><%= Html.Encode(Model.Name) %></div>
+        <p class="comment"><%= Html.Encode(Model.Name) %></p>
         
         <div class="display-label">Status</div>
-        <div class="display-field"><%= Html.Encode(Model.Status) %></div>
+        <p class="comment"><%= Html.Encode(Model.Status) %></p>
         
-        <div class="display-label">UserID</div>
-        <div class="display-field"><%= Html.Encode(Model.UserID) %></div>
+        <div class="display-label">Created by UserID</div>
+        <p class="comment"><%= Html.Encode(Model.UserID) %></p>
         
         <div class="display-label">UsesASEPSA</div>
-        <div class="display-field"><%= Html.Encode(Model.UsesASEPSA) %></div>
+        <p class="comment"><%= Html.Encode(Model.UsesASEPSA) %></p>
 
         <% foreach (var img in Model.Images) { %>
             <%= Html.ActionLink("Image","Image", new{id=img}) %>
@@ -55,12 +55,12 @@
         
         
     </fieldset>
-    <p>
+    <p class="button">
         <% if (Model.Status == 0)
            { %>
-        <%= Html.ActionLink("Finalize", "Finalize", new { id = Model.ID /* id=Model.PrimaryKey */ })%> |
+        <%= Html.ActionLink("Finalize", "Finalize", new { id = Model.ID /* id=Model.PrimaryKey */ })%> <br />
         <% } else { %>
-        <%= Html.ActionLink("Split", "SelectUsersForSplit", new { id = Model.ID, group = Model.GroupID })%> | 
+        <%= Html.ActionLink("Split", "SelectUsersForSplit", new { id = Model.ID, group = Model.GroupID })%> <br />
         <% } %>
         <%= Html.ActionLink("Back to List", "Index") %>
     </p>

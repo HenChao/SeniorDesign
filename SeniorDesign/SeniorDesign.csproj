@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\CSLogo.png" />
+    <Content Include="Content\images\primary.png" />
     <Content Include="Content\images\profiles\close_enough.jpg" />
     <Content Include="Content\images\profiles\fawkes.jpg" />
     <Content Include="Content\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
@@ -130,6 +131,7 @@
     <Content Include="Views\Permission\Create.aspx" />
     <Content Include="Views\Permission\Delete.aspx" />
     <Content Include="Views\Permission\Index.aspx" />
+    <Content Include="Views\Shared\UserTabsControl.ascx" />
     <Content Include="Views\SubExpense\Create.aspx" />
     <Content Include="Views\SubExpense\Delete.aspx" />
     <Content Include="Views\Transactions\Index.aspx" />

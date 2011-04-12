@@ -12,7 +12,7 @@
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Form</legend>
             
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Username) %>
@@ -61,9 +61,9 @@
 
     <% } %>
 
-    <div>
-        <%= Html.ActionLink("Back to List", "Index") %>
-    </div>
+    <p class="button">
+        <%= Html.ActionLink("Back to Users", "Index") %>
+    </p>
 
 </asp:Content>
 
