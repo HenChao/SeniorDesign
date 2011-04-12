@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../Content/Mobile.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server" />
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1><img id="Img1" src="~/Content/images/CSLogoMobile.png" runat="server"/></h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><%: Html.ActionLink("Home", "Index/", "Home")%></li>
+                    <li><%: Html.ActionLink("About Us", "About/", "Home")%></li>
+                    <li><%: Html.ActionLink("Project Status", "Project/", "Home")%></li>
+                </ul>
+            </div>
+            <div data-role="navbar">
+                <ul>
+                    <li><%: Html.ActionLink("Groups", "Index", "Group")%></li>
+                    <li><%: Html.ActionLink("Users", "Index", "Users")%></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+        <div data-role="footer">
+        </div>
+    </div>
+</body>
+</html>

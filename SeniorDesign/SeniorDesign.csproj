@@ -69,6 +69,7 @@
     <Compile Include="Controllers\TransactionsController.cs" />
     <Compile Include="Controllers\TransactionWindowController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="CustomMobileViewEngine.cs" />
     <Compile Include="gen.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -95,6 +96,8 @@
     <Compile Include="UnauthenticatedUserException.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\CSLogoMobile.png" />
+    <Content Include="Content\Mobile.css" />
     <Content Include="Content\images\CSLogo.png" />
     <Content Include="Content\images\primary.png" />
     <Content Include="Content\images\profiles\close_enough.jpg" />
@@ -115,10 +118,19 @@
     <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Content\Tables.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery.mobile-1.0a4.1.min.js" />
     <Content Include="Views\Expense\Create.aspx" />
     <Content Include="Views\Expense\Details.aspx" />
     <Content Include="Views\Expense\Finalize.aspx" />
     <Content Include="Views\Expense\Index.aspx" />
+    <Content Include="Views\Expense\Mobile\Create.aspx" />
+    <Content Include="Views\Expense\Mobile\Details.aspx" />
+    <Content Include="Views\Expense\Mobile\Finalize.aspx" />
+    <Content Include="Views\Expense\Mobile\Index.aspx" />
+    <Content Include="Views\Expense\Mobile\PreSplit.aspx" />
+    <Content Include="Views\Expense\Mobile\SelectUsersForSplit.aspx" />
+    <Content Include="Views\Expense\Mobile\Split.aspx" />
+    <Content Include="Views\Expense\Mobile\SubExpenseList.ascx" />
     <Content Include="Views\Expense\PreSplit.aspx" />
     <Content Include="Views\Expense\SelectUsersForSplit.aspx" />
     <Content Include="Views\Expense\Split.aspx" />
@@ -126,21 +138,40 @@
     <Content Include="Views\Group\Create.aspx" />
     <Content Include="Views\Group\Edit.aspx" />
     <Content Include="Views\Group\Index.aspx" />
+    <Content Include="Views\Group\Mobile\Create.aspx" />
+    <Content Include="Views\Group\Mobile\Edit.aspx" />
+    <Content Include="Views\Group\Mobile\Index.aspx" />
+    <Content Include="Views\Home\Mobile\About.aspx" />
+    <Content Include="Views\Home\Mobile\Index.aspx" />
+    <Content Include="Views\Home\Mobile\Project.aspx" />
     <Content Include="Views\Home\Project.aspx" />
     <Content Include="Views\Login\Index.aspx" />
+    <Content Include="Views\Login\Mobile\Index.aspx" />
     <Content Include="Views\Permission\Create.aspx" />
     <Content Include="Views\Permission\Delete.aspx" />
     <Content Include="Views\Permission\Index.aspx" />
+    <Content Include="Views\Permission\Mobile\Create.aspx" />
+    <Content Include="Views\Permission\Mobile\Delete.aspx" />
+    <Content Include="Views\Permission\Mobile\Index.aspx" />
     <Content Include="Views\Shared\UserTabsControl.ascx" />
     <Content Include="Views\SubExpense\Create.aspx" />
     <Content Include="Views\SubExpense\Delete.aspx" />
+    <Content Include="Views\SubExpense\Mobile\Create.aspx" />
+    <Content Include="Views\SubExpense\Mobile\Delete.aspx" />
     <Content Include="Views\Transactions\Index.aspx" />
+    <Content Include="Views\Transactions\Mobile\Index.aspx" />
     <Content Include="Views\TransactionWindow\Create.aspx" />
     <Content Include="Views\TransactionWindow\Details.aspx" />
     <Content Include="Views\TransactionWindow\Index.aspx" />
+    <Content Include="Views\TransactionWindow\Mobile\Create.aspx" />
+    <Content Include="Views\TransactionWindow\Mobile\Details.aspx" />
+    <Content Include="Views\TransactionWindow\Mobile\Index.aspx" />
     <Content Include="Views\Users\ChangePassword.aspx" />
     <Content Include="Views\Users\Create.aspx" />
     <Content Include="Views\Users\Index.aspx" />
+    <Content Include="Views\Users\Mobile\ChangePassword.aspx" />
+    <Content Include="Views\Users\Mobile\Create.aspx" />
+    <Content Include="Views\Users\Mobile\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -194,6 +225,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Mobile.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

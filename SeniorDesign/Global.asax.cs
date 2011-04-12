@@ -47,6 +47,11 @@ namespace SeniorDesign
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            // For supporting mobile browsers: http://www.hanselman.com/blog/ABetterASPNETMVCMobileDeviceCapabilitiesViewEngine.aspx
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.AddGenericMobile<WebFormViewEngine>();
+            ViewEngines.Engines.Add(new WebFormViewEngine());
         }
 
         public void Session_Start(object sender, EventArgs e)
