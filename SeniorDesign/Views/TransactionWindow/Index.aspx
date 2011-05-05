@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>All Transactions for: <%= Request.QueryString["Name"] %></h2>
+    <h2>All Transactions for Group: <%= Html.Encode(ViewData["Message"]) %></h2>
 
     <p>
         Listed below are the transactions for this group.

@@ -15,6 +15,9 @@ namespace SeniorDesign.Controllers
         {
             ServiceClient sc = Sas.GetAuthenticatedServiceClient(this, action);
             var transactions = sc.GetTransactionWindows(group, new PagedDataRequest() { StartRow = 0, EndRow = 100000 });
+
+            ViewBag.Message = sc.GetGroup(group).Name;
+
             return View(transactions.Data);
         }
 

@@ -36,7 +36,7 @@
     
         <tr>
             <td>
-                <p class="smallbutton"><%= Html.ActionLink("Select", "Index", "TransactionWindow", new { group = item.Id, item.Name }, null)%></p>
+                <p class="smallbutton"><%= Html.ActionLink("Select", "Index", "TransactionWindow", new { group = item.Id }, null)%></p>
             </td>
             <td>
                 <%= Html.Encode(item.Name) %>

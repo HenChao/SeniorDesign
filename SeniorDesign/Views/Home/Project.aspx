@@ -91,12 +91,12 @@
     <tr>
         <td>April 29th</td>
         <td>Advanced Mobile Website</td>
-        <td class="yellow">In Progress</td>
+        <td class="green">Complete</td>
     </tr>
     <tr>
         <td>May 6th</td>
         <td>Final Deliverable</td>
-        <td class="yellow">Almost there</td>
+        <td class="green">Made it to the promise land!</td>
     </tr>
 </table>
 
