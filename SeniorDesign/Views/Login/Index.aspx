@@ -36,8 +36,13 @@
             
             <p>
                 <input type="submit" value="Login" />
+              
             </p>
-        </fieldset>
+            <!-- TODO: Fix this to non static --> 
+                 <a href="http://localhost:3434/g.aspx/2/FbLogon">
+                   <img alt="" class="style1" 
+                src="http://localhost:3434/Content/images/fbconnect.gif" />
+                </a></fieldset>
 
     <% } %>
 
@@ -46,4 +51,15 @@
     </div>
 
 </asp:Content>
+
+<asp:Content ID="Content3" runat="server" contentplaceholderid="HeaderContent">
+    <style type="text/css">
+        .style1
+        {
+            width: 194px;
+            height: 25px;
+        }
+    </style>
+</asp:Content>
+
 

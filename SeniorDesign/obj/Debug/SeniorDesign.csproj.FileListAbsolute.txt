@@ -18,3 +18,8 @@ C:\Users\Henry\Documents\4th Year\Senior Design\git\SeniorDesign\SeniorDesign\bi
 C:\Users\Henry\Documents\4th Year\Senior Design\git\SeniorDesign\SeniorDesign\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Henry\Documents\4th Year\Senior Design\git\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.dll
 C:\Users\Henry\Documents\4th Year\Senior Design\git\SeniorDesign\SeniorDesign\obj\Debug\SeniorDesign.pdb
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\Facebook.dll
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\Newtonsoft.Json.dll
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\Facebook.xml
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\Newtonsoft.Json.pdb
+C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\Newtonsoft.Json.xml

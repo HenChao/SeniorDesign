@@ -33,7 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\packages\Facebook.5.0.9.0\lib\net40-client\Facebook.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.1\lib\40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -61,10 +67,12 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ExpenseController.cs" />
+    <Compile Include="Controllers\FbLogonController.cs" />
     <Compile Include="Controllers\GroupController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PermissionController.cs" />
+    <Compile Include="Controllers\StatmentController.cs" />
     <Compile Include="Controllers\SubExpenseController.cs" />
     <Compile Include="Controllers\TransactionsController.cs" />
     <Compile Include="Controllers\TransactionWindowController.cs" />
@@ -82,12 +90,14 @@
     <Compile Include="Models\FullPermissionInfo.cs" />
     <Compile Include="Models\FullUserInfo.cs" />
     <Compile Include="Models\GroupData.cs" />
+    <Compile Include="Models\LogOffVerify.cs" />
     <Compile Include="Models\PasswordChangeData.cs" />
     <Compile Include="Models\PermissionGrant.cs" />
     <Compile Include="Models\PermissionsForUser.cs" />
     <Compile Include="Models\PreSplitData.cs" />
     <Compile Include="Models\SplitData.cs" />
     <Compile Include="Models\SplitDisplayData.cs" />
+    <Compile Include="Models\StatmentData.cs" />
     <Compile Include="Models\UsernamePasswordCreds.cs" />
     <Compile Include="Models\UserSelectionData.cs" />
     <Compile Include="Models\UserTransactionData.cs" />
@@ -97,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\CSLogoMobile.png" />
+    <Content Include="Content\images\fbconnect.gif" />
     <Content Include="Content\Mobile.css" />
     <Content Include="Content\images\CSLogo.png" />
     <Content Include="Content\images\primary.png" />
@@ -146,6 +157,7 @@
     <Content Include="Views\Home\Mobile\Project.aspx" />
     <Content Include="Views\Home\Project.aspx" />
     <Content Include="Views\Login\Index.aspx" />
+    <Content Include="Views\Login\LogOff.aspx" />
     <Content Include="Views\Login\Mobile\Index.aspx" />
     <Content Include="Views\Permission\Create.aspx" />
     <Content Include="Views\Permission\Delete.aspx" />
@@ -154,6 +166,7 @@
     <Content Include="Views\Permission\Mobile\Delete.aspx" />
     <Content Include="Views\Permission\Mobile\Index.aspx" />
     <Content Include="Views\Shared\UserTabsControl.ascx" />
+    <Content Include="Views\Statment\Details.aspx" />
     <Content Include="Views\SubExpense\Create.aspx" />
     <Content Include="Views\SubExpense\Delete.aspx" />
     <Content Include="Views\SubExpense\Mobile\Create.aspx" />
@@ -229,6 +242,9 @@
   <ItemGroup>
     <Content Include="Views\Shared\Mobile.Master" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -245,8 +261,8 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>31627</DevelopmentServerPort>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>3434</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

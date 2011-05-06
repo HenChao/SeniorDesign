@@ -58,6 +58,7 @@
             </td>
             <td>
                 <p class="smallbutton"><%= Html.ActionLink("Summary", "Details", new { id=item.Id })%>
+                <%= Html.ActionLink("Statment", "Details", "Statment",  new { id=item.Id }, null)%>
                 <%= Html.ActionLink("Expenses", "Index", "Expense", new { /* id=item.PrimaryKey */ }, null)%></p>
             </td>
             <!--

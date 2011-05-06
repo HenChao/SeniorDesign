@@ -66,7 +66,7 @@ namespace SeniorDesign
         public void Session_End(object sender, EventArgs e)
         {
             ServiceClient sc = Session["ServiceClient"] as ServiceClient;
-            if (sc != null)
+            if (sc != null && sc.State == System.ServiceModel.CommunicationState.Opened)
             {
                 sc.Close();
             }

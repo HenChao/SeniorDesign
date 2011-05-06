@@ -34,7 +34,7 @@ namespace SeniorDesign.Controllers
             }
 
             bool auth = sc.UsernamePasswordAuthenticate(creds.Username, creds.Password);
-           
+            
             if (auth)
             {
                 Session["AuthStatus"] = true;
@@ -61,5 +61,21 @@ namespace SeniorDesign.Controllers
             
             return View(creds);
         }
+
+        public ActionResult LogOff(string action)
+        {
+            ServiceClient sc = Sas.GetAuthenticatedServiceClient(this, action);
+            return View(new SeniorDesign.Models.LogOffVerify(){ UserName= ((UserInfo)Session["UserId"]).Username});
+        }
+
+        [HttpPost]
+        public ActionResult LogOff(SeniorDesign.Models.LogOffVerify model)
+        {
+            FormsAuthentication.SignOut();
+            this.Session.Clear();
+            return RedirectToAction("Index");
+        }
+        
+
     }
 }

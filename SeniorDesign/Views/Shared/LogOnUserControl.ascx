@@ -3,7 +3,7 @@
     if (Request.IsAuthenticated) {
 %>
         Welcome <b><%: Page.User.Identity.Name %></b>!
-        [ <%: Html.ActionLink("Log Off", "Index", "Login") %> ]
+        [ <%: Html.ActionLink("Log Off", "LogOff", "Login") %> ]
 <%
     }
     else {
