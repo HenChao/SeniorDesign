@@ -23,3 +23,8 @@ C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\Newtonsof
 C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\Facebook.xml
 C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\Newtonsoft.Json.pdb
 C:\Users\ethiele\Documents\Programing\SD\SeniorDesign\SeniorDesign\bin\Newtonsoft.Json.xml
+C:\Users\ethiele\Documents\Visual Studio 2010\Projects\HCClient\SeniorDesign\SeniorDesign\bin\Facebook.dll
+C:\Users\ethiele\Documents\Visual Studio 2010\Projects\HCClient\SeniorDesign\SeniorDesign\bin\Newtonsoft.Json.dll
+C:\Users\ethiele\Documents\Visual Studio 2010\Projects\HCClient\SeniorDesign\SeniorDesign\bin\Facebook.xml
+C:\Users\ethiele\Documents\Visual Studio 2010\Projects\HCClient\SeniorDesign\SeniorDesign\bin\Newtonsoft.Json.pdb
+C:\Users\ethiele\Documents\Visual Studio 2010\Projects\HCClient\SeniorDesign\SeniorDesign\bin\Newtonsoft.Json.xml

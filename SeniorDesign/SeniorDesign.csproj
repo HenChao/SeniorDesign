@@ -92,6 +92,7 @@
     <Compile Include="Models\GroupData.cs" />
     <Compile Include="Models\LogOffVerify.cs" />
     <Compile Include="Models\PasswordChangeData.cs" />
+    <Compile Include="Models\PaymentData.cs" />
     <Compile Include="Models\PermissionGrant.cs" />
     <Compile Include="Models\PermissionsForUser.cs" />
     <Compile Include="Models\PreSplitData.cs" />
@@ -172,6 +173,7 @@
     <Content Include="Views\Shared\MobileLoginControl.ascx" />
     <Content Include="Views\Shared\UserTabsControl.ascx" />
     <Content Include="Views\Statment\Details.aspx" />
+    <Content Include="Views\Statment\Direct.aspx" />
     <Content Include="Views\SubExpense\Create.aspx" />
     <Content Include="Views\SubExpense\Delete.aspx" />
     <Content Include="Views\SubExpense\Mobile\Create.aspx" />
