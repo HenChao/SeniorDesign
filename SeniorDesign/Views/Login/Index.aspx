@@ -47,19 +47,16 @@
     <% } %>
 
     <div>
-        <%= Html.ActionLink("Back to List", "Index") %>
+        <p class="button"><%= Html.ActionLink("Cancel", "Index") %></p>
     </div>
 
 </asp:Content>
 
-<asp:Content ID="Content3" runat="server" contentplaceholderid="HeaderContent">
-    <style type="text/css">
-        .style1
-        {
-            width: 194px;
-            height: 25px;
-        }
-    </style>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="SideContent" runat="server">
+	<div id="rightSide" style="text-align:center">
+        [Your ad here?]
+        <br />
+        <img src="~/Content/images/rulost.jpg" runat="server"/>
+    </div>
 </asp:Content>
-
-

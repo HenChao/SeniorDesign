@@ -12,13 +12,10 @@
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
-            <legend>Form</legend>
+            <legend>New Transaction Form</legend>
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Name) %>
             </div>
-            <p class="comment">
-                Enter a name for this transaction.
-            </p>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.Name) %>
                 <%= Html.ValidationMessageFor(model => model.Name) %>
@@ -28,9 +25,6 @@
                 Make Primary? <%= Html.CheckBoxFor(model => model.IsPrimary) %>
                 <%= Html.ValidationMessageFor(model => model.IsPrimary) %>
             </div>
-            <p class="comment">
-                Make this transaction your primary transaction for this period?
-            </p>
             
             <p>
                 <input type="submit" value="Create" />
@@ -45,3 +39,17 @@
 
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="SideContent" runat="server">
+    <div id="rightSide">
+    <h4>Name</h4>
+            <p>
+                Enter a name for this transaction.
+            </p>
+            
+    <h4>Make Primary?</h4>
+            <p>
+                Make this transaction your primary transaction? If set to be your primary transaction,
+                then all future default actions made will automatically affect this transaction.
+            </p>
+    </div>
+</asp:Content>

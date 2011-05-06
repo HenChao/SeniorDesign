@@ -18,7 +18,10 @@
                 Id
             </th>
             <th>
+                <a class="info" href="#">
                 IsSA
+                    <span>Indicates if the user is a super user</span>
+                </a>
             </th>
             <th>
                 LastName
@@ -32,9 +35,11 @@
     
         <tr>
             <td>
-                <%= Html.ActionLink("Edit", "Edit", new { id = item.Id /* id=item.PrimaryKey */ })%> |
-                <%= Html.ActionLink("Details", "Details", new { id = item.Id /* id=item.PrimaryKey */ })%> |
-                <%= Html.ActionLink("Delete", "Delete", new { id = item.Id /* id=item.PrimaryKey */ })%> |
+                <!--
+                <%= Html.ActionLink("Edit", "Edit", new { id = item.Id /* id=item.PrimaryKey */ })%> |<br />
+                <%= Html.ActionLink("Details", "Details", new { id = item.Id /* id=item.PrimaryKey */ })%> |<br />
+                <%= Html.ActionLink("Delete", "Delete", new { id = item.Id /* id=item.PrimaryKey */ })%> |<br />
+                -->
                 <%= Html.ActionLink("Change Password", "ChangePassword", new { id=item.Id /* id=item.PrimaryKey */ })%> |
                 <%= Html.ActionLink("Permissions", "Index", "Permission", new { id=item.Id /* id=item.PrimaryKey */ }, null)%>
             </td>
@@ -60,8 +65,19 @@
     </table>
 
     <p class="button">
-        <%= Html.ActionLink("Create New", "Create") %>
+        <%= Html.ActionLink("Create New User", "Create") %>
     </p>
 
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="SideContent" runat="server">
+    <div id="rightSide">
+    <p>
+        This is the user management window for the users in the Cost Split system. If you can see this page and
+        you are not an administrator of the Cost Split system, you must have taken a wrong turn somewhere.
+    </p>
+    <p>
+        Happens to the best of us.
+    </p>
+    </div>
+</asp:Content>

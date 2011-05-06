@@ -15,6 +15,8 @@ namespace SeniorDesign.Controllers
         {
             ServiceClient sc = Sas.GetAuthenticatedServiceClient(this, action);
             ExpenceInfo[] exp = sc.GetAllExpences(group, DateTime.MinValue, DateTime.MaxValue);
+
+            ViewBag.Message = sc.GetGroup(group);
             
             return View(exp);
         }

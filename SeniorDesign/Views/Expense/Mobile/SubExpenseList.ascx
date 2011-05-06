@@ -1,78 +1,29 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<ExpenceInfo>" %>
-
-    <table>
-        <tr>
-            <th></th>
-            <th>
-                ASEPSA_Amount
-            </th>
-            <th>
-                AmountSubtotal
-            </th>
-            <th>
-                AmountTotal
-            </th>
-            <th>
-                Description
-            </th>
-            <th>
-                ExpenseID
-            </th>
-            <th>
-                ID
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                SplitIssued
-            </th>
-        </tr>
-
-    <% foreach (var item in Model.SubExpenses) { %>
-    
-        <tr>
-            <td>
+<table>
+    <% foreach (var item in Model.SubExpenses)
+       { %>
+    <tr>
+        <td>
             <% if (Model.Status == 0)
                { // Created  %>
-                    <p class="smallbutton">
-                    <%= Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })%>
-                    <%= Html.ActionLink("Delete", "Delete", "SubExpense", new { id = item.ID /* id=item.PrimaryKey */ }, null)%>
-                    </p>
-                <% } %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:F}", item.ASEPSA_Amount)) %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:F}", item.AmountSubtotal)) %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:F}", item.AmountTotal)) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.Description) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.ExpenseID) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.ID) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.Name) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.SplitIssued) %>
-            </td>
-        </tr>
-    
+            <p class="smallbutton">
+                <div data-role="button"><%= Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })%></div>
+                <div data-role="button"><%= Html.ActionLink("Delete", "Delete", "SubExpense", new { id = item.ID /* id=item.PrimaryKey */ }, null)%></div>
+            </p>
+            <% } %>
+        </td>
+        <td>
+            <b>ASEPSA_Amount:</b> <%= Html.Encode(String.Format("{0:F}", item.ASEPSA_Amount)) %><br />
+            <b>AmountSubtotal:</b> <%= Html.Encode(String.Format("{0:F}", item.AmountSubtotal)) %><br />
+            <b>AmountTotal:</b> <%= Html.Encode(String.Format("{0:F}", item.AmountTotal)) %><br />
+            <b>Description:</b> <%= Html.Encode(item.Description) %><br />
+            <b>ExpenseID:</b> <%= Html.Encode(item.ExpenseID) %><br />
+            <b>ID:</b> <%= Html.Encode(item.ID) %><br />
+            <b>Name:</b> <%= Html.Encode(item.Name) %><br />
+            <b>SplitIssued?:</b> <%= Html.Encode(item.SplitIssued) %>
+        </td>
+    </tr>
     <% } %>
-
-    </table>
-
-    <p class="smallbutton">
-        <%= Html.ActionLink("Create New", "Create", "SubExpense", new { id = Model.ID }, null)%>
-    </p>
-
-
+</table>
+<div data-role="button">
+    <%= Html.ActionLink("Create New", "Create", "SubExpense", new { id = Model.ID }, null)%></div>

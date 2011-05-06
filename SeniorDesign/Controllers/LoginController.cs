@@ -57,8 +57,6 @@ namespace SeniorDesign.Controllers
                 creds.CredStatusFailed = true;
             }
             
-            
-            
             return View(creds);
         }
 

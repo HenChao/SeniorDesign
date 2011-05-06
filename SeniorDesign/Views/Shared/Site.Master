@@ -20,7 +20,6 @@
         <div id="menucontainer">
             <ul id="menu">              
                 <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
-                <li><%: Html.ActionLink("About Us", "About", "Home")%></li>
                 <li><%: Html.ActionLink("Project Status", "Project", "Home")%></li>
                 <% Html.RenderPartial("UserTabsControl"); %>
             </ul>
@@ -30,8 +29,9 @@
     <div class="page">
 
         <div id="main">
+            <asp:ContentPlaceHolder ID="SideContent" runat="server" />
+            
             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-
             <div id="footer">
             </div>
         </div>

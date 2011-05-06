@@ -9,49 +9,26 @@
     <h2>Users Managment</h2>
 
     <table>
-        <tr>
-            <th></th>
-            <th>
-                FirstName
-            </th>
-            <th>
-                Id
-            </th>
-            <th>
-                IsSA
-            </th>
-            <th>
-                LastName
-            </th>
-            <th>
-                Username
-            </th>
-        </tr>
-
     <% foreach (var item in Model) { %>
     
         <tr>
-            <td>
+            <th>
+            <!--
                 <%= Html.ActionLink("Edit", "Edit", new { id = item.Id /* id=item.PrimaryKey */ })%> |
                 <%= Html.ActionLink("Details", "Details", new { id = item.Id /* id=item.PrimaryKey */ })%> |
                 <%= Html.ActionLink("Delete", "Delete", new { id = item.Id /* id=item.PrimaryKey */ })%> |
-                <%= Html.ActionLink("Change Password", "ChangePassword", new { id=item.Id /* id=item.PrimaryKey */ })%> |
-                <%= Html.ActionLink("Permissions", "Index", "Permission", new { id=item.Id /* id=item.PrimaryKey */ }, null)%>
-            </td>
+                -->
+                <div data-role="button"><%= Html.ActionLink("Change Password", "ChangePassword", new { id=item.Id /* id=item.PrimaryKey */ })%></div>
+                <div data-role="button"><%= Html.ActionLink("Permissions", "Index", "Permission", new { id=item.Id /* id=item.PrimaryKey */ }, null)%></div>
+            </th>
             <td>
-                <%= Html.Encode(item.FirstName) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.Id) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.IsSA) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.LastName) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.Username) %>
+                <b>Username:</b> <%= Html.Encode(item.Username) %><br /><br />
+
+                <b>First Name:</b> <%= Html.Encode(item.FirstName) %><br />
+                <b>Last Name:</b> <%= Html.Encode(item.LastName) %><br /><br />
+                
+                <b>ID:</b> <%= Html.Encode(item.Id) %><br />
+                <b>Is SA?:</b> <%= Html.Encode(item.IsSA) %><br />
             </td>
         </tr>
     
@@ -59,9 +36,7 @@
 
     </table>
 
-    <p class="button">
-        <%= Html.ActionLink("Create New", "Create") %>
-    </p>
+    <div data-role="button"><%= Html.ActionLink("Create New", "Create") %></div>
 
 </asp:Content>
 

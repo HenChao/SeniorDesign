@@ -8,10 +8,6 @@
 
     <h2><%: Page.User.Identity.Name%>'s Groups</h2>
 
-    <p>
-        Listed below are the groups in which you belong. Select one of the groups below to add/edit transactions, or create a new group.
-    </p>
-
     <p class="button">
         <%= Html.ActionLink("Create A New Group", "Create") %>
     </p>
@@ -36,7 +32,7 @@
     
         <tr>
             <td>
-                <p class="smallbutton"><%= Html.ActionLink("Select", "Index", "TransactionWindow", new { group = item.Id, item.Name }, null)%></p>
+                <p class="smallbutton"><%= Html.ActionLink("Select", "Index", "TransactionWindow", new { group = item.Id }, null)%></p>
             </td>
             <td>
                 <%= Html.Encode(item.Name) %>
@@ -57,3 +53,13 @@
 
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="SideContent" runat="server">
+    <div id="rightSide">
+	<p>
+        Listed to the left are the groups in which you belong.
+    </p>
+    <p>
+        Select one of the groups to add/edit transactions, or create a new group.
+    </p>
+    </div>
+</asp:Content>

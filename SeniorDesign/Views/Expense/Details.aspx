@@ -6,44 +6,89 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>About this expense:</h2>
+    <h2>About Expense #<%= Html.Encode(Model.ID) %>: <%= Html.Encode(Model.Name) %></h2>
 
     <fieldset>
         <legend>Details</legend>
         
-        <div class="display-label">Amount</div>
-        <p class="comment"><%= Html.Encode(String.Format("{0:F}", Model.Amount)) %></p>
-        
-        <div class="display-label">Date Entered</div>
-        <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateEntered)) %></p>
-        
-        <div class="display-label">Date Finalized</div>
-        <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateFinalized)) %></p>
-        
-        <div class="display-label">Date Of Expense</div>
-        <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateOfExpense)) %></p>
-        
-        <div class="display-label">Description</div>
-        <p class="comment"><%= Html.Encode(Model.Description) %></p>
-        
-        <div class="display-label">Part of GroupID</div>
-        <p class="comment"><%= Html.Encode(Model.GroupID) %></p>
-        
-        <div class="display-label">Expense ID</div>
-        <p class="comment"><%= Html.Encode(Model.ID) %></p>
-        
-        <div class="display-label">Name</div>
-        <p class="comment"><%= Html.Encode(Model.Name) %></p>
-        
-        <div class="display-label">Status</div>
-        <p class="comment"><%= Html.Encode(Model.Status) %></p>
-        
-        <div class="display-label">Created by UserID</div>
-        <p class="comment"><%= Html.Encode(Model.UserID) %></p>
-        
-        <div class="display-label">UsesASEPSA</div>
-        <p class="comment"><%= Html.Encode(Model.UsesASEPSA) %></p>
-
+        <table>
+            <tr>
+                <th>
+                    <a class="info" href="#">
+                       Amount
+                       <span>The amount spent on this expense</span>
+                    </a>
+                </th>
+                <th>
+                    <a class="info" href="#">
+                       Date Entered
+                       <span>The date this expense was entered into the system</span>
+                    </a>
+                </th>
+                <th>
+                    <a class="info" href="#">
+                       Date Finalized
+                       <span>The date this expense was finalized by all parties</span>
+                    </a>
+                </th>
+                <th>
+                    <a class="info" href="#">
+                       Date Of Expense
+                       <span>The date this expense was incurred</span>
+                    </a>
+                </th>
+                <th>
+                    <a class="info" href="#">
+                       GroupID
+                       <span>The group to which this expense belongs</span>
+                    </a>
+                </th>
+                <th>
+                    <a class="info" href="#">
+                       Status
+                       <span>The status of this expense</span>
+                    </a>
+                </th>
+                <th>
+                    <a class="info" href="#">
+                       UserID
+                       <span>The ID of the user who created this expense</span>
+                    </a>
+                </th>
+                <th>
+                    <a class="info" href="#">
+                       UsesASEPSA
+                       <span>Whether or not this uses ASEPSA</span>
+                    </a>
+                </th>
+            </tr>
+            <td>
+                <p class="comment"><%= Html.Encode(String.Format("{0:F}", Model.Amount)) %></p>
+            </td>
+            <td>        
+                <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateEntered)) %></p>
+            </td>
+            <td>
+                <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateFinalized)) %></p>
+            </td>
+            <td>
+                <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateOfExpense)) %></p>
+            </td>
+            <td>
+                <p class="comment"><%= Html.Encode(Model.GroupID) %></p>
+            </td>
+            <td>
+                <p class="comment"><%= Html.Encode(Model.Status) %></p>
+            </td>
+            <td>
+                <p class="comment"><%= Html.Encode(Model.UserID) %></p>
+            </td>
+            <td>
+                <p class="comment"><%= Html.Encode(Model.UsesASEPSA) %></p>
+            </td>
+        </tr>
+    </table>
+    <br />
         <% foreach (var img in Model.Images) { %>
             <%= Html.ActionLink("Image","Image", new{id=img}) %>
             <img src="<%= Url.Action("Image", new{id=img}) %>" />
@@ -67,3 +112,11 @@
 
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="SideContent" runat="server">
+<div id="rightSide">
+    <h4>Description</h4>
+    <p>
+    <%= Html.Encode(Model.Description) %>
+    </p>
+</div>
+</asp:Content>

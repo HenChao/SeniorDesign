@@ -13,7 +13,7 @@
 <h2>Current Project Status</h2>
 
 <h3>How's She Lookin', Captain?</h3>
-<p>Holding strong. Still in the early stages of development.</p>
+<p>So good. Like pie.</p>
 
 <h4>Preliminary Deliverables</h4>
 
@@ -91,13 +91,25 @@
     <tr>
         <td>April 29th</td>
         <td>Advanced Mobile Website</td>
-        <td class="yellow">In Progress</td>
+        <td class="green">Complete</td>
     </tr>
     <tr>
         <td>May 6th</td>
         <td>Final Deliverable</td>
-        <td class="yellow">Almost there</td>
+        <td class="green">Made it to the promise land!</td>
     </tr>
 </table>
 
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="SideContent" runat="server">
+<div id="rightSide">
+    <h4>About Us: The Team Behind the Machine</h4>
+
+    <h5>Edward Thiele</h5>
+    <p>Some say he only sleeps 2 hours a day, and naps for the other 22 hours. Others claim that he once killed a yak from 200 yards away with mind bullets. All we know is his name: Edward Thiele.</p>
+
+    <h5>Henry Chao</h5>
+    <p>Henry is a senior at Rutgers University, studying Electrical and Computer Engineering. He enjoys taking long walks on the beach, and drinking pina coladas.</p>
+</div>
 </asp:Content>

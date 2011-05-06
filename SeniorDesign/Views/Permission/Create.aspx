@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<SeniorDesign.Models.PermissionGrant>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Create
+	Add New Permission
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Create</h2>
+    <h2>Add New Permission</h2>
 
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
@@ -37,8 +37,8 @@
 
     <% } %>
 
-    <div>
-        <%= Html.ActionLink("Back to List", "Index") %>
+   <div>
+        <p class="button"><%= Html.ActionLink("Back to Users List", "Index") %></p>
     </div>
 
 </asp:Content>

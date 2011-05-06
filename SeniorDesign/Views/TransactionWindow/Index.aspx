@@ -6,25 +6,30 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>All Transactions for: <%= Request.QueryString["Name"] %></h2>
-
-    <p>
-        Listed below are the transactions for this group.
-    </p>
+    <h2>All Transactions for Group: <%= Html.Encode(ViewData["Message"]) %></h2>
 
     <table>
         <tr>
             <th>
+                <a class="info" href="#">
                 Transaction ID
+                    <span>The ID of the transaction</span>
+                </a>
             </th>
             <th>
                 Name
             </th>
             <th>
+                <a class="info" href="#">
                 Start Date
+                    <span>The date and time when the transaction was first created</span>
+                </a>
             </th>
             <th>
+                <a class="info" href="#">
                 End Date
+                    <span>The date and time when the transaction was closed. If blank, then the transaction is still open</span>
+                </a>
             </th>
             <th></th>
             <!--
@@ -75,14 +80,27 @@
 
     </table>
 
-    <p>
-        Note: The <img id="Img2" src="~/Content/images/primary.png" runat="server"/> symbol indicates 
-        that this is your primary transaction.
-    </p>
-
     <p class="button">
         <%= Html.ActionLink("Add New Transaction", "Create") %>
     </p>
 
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="SideContent" runat="server">
+    <div id="rightSide">
+    <p>
+        Listed to the left are the transactions for this group.
+    </p>
+    <p>
+        Note: The <img id="Img2" src="~/Content/images/primary.png" runat="server"/> symbol indicates 
+        that this is your primary transaction. Default actions made for the group will automatically
+        affect this transaction.
+    </p>
+    <p>
+        Click on "Summary" to obtain a payment plan for this transaction.
+    </p>
+    <p>
+        Click on "Expenses" to obtain a detailed view of all your expenses for this transaction.
+    </p>
+    </div>
+</asp:Content>
