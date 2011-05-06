@@ -36,7 +36,7 @@
     
         <tr>
             <td>
-                <div data-role="button"><%= Html.ActionLink("Select", "Index", "TransactionWindow", new { group = item.Id, item.Name }, null)%></div>
+                <div data-role="button"><%= Html.ActionLink("Select", "Index", "TransactionWindow", new { group = item.Id}, null)%></div>
             </td>
             <td>
                 <%= Html.Encode(item.Name) %>

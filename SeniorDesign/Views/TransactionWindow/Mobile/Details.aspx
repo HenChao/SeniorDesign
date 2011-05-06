@@ -69,75 +69,23 @@
     <h3>Transactions Payable</h3>
 
     <table>
-        <tr>
-            <th></th>
-            <th>
-                Amount
-            </th>
-            <th>
-                Date Of Expense
-            </th>
-            <th>
-                Expense Name
-            </th>
-            <th>
-                SubExpence Name
-            </th>
-             <th>
-                % of Expense
-            </th>
-            <th>
-                % of SubExpense
-            </th>
-            <th>
-                From UserName
-            </th>
-            <th>
-                ID
-            </th>
-            <th>
-                Status
-            </th>
-            <th>
-                To UserName
-            </th>
-        </tr>
-
     <% foreach (var item in Model.Costs) { %>
     
         <tr>
             <td>
-                <%= Html.ActionLink("View Expense", "Details", "Expense", new{id=item.ForExpense}, null) %>
+                <div data-role="button"><%= Html.ActionLink("View Expense", "Details", "Expense", new{id=item.ForExpense}, null) %></div>
             </td>
             <td>
-                <%= Html.Encode(String.Format("{0:C}", item.Amount)) %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:g}", item.DateOfExpense))%>
-            </td>
-            <td>
-                <%= Html.Encode(item.ForExpenseName) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.ForSubExpenceName) %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:p1}", item.PercentOfExpense)) %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:p1}", item.PercentOfSubExpense)) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.FromUserName) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.ID) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.Status) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.ToUserName) %>
+                <b>Amount:</b> <%= Html.Encode(String.Format("{0:C}", item.Amount)) %><br />
+                <b>Date of Expense:</b> <%= Html.Encode(String.Format("{0:g}", item.DateOfExpense))%><br />
+                <b>Expense Name:</b> <%= Html.Encode(item.ForExpenseName) %><br />
+                <b>SubExpense Name:</b> <%= Html.Encode(item.ForSubExpenceName) %><br />
+                <b>% of Expense:</b> <%= Html.Encode(String.Format("{0:p1}", item.PercentOfExpense)) %><br />
+                <b>% of SubExpense:</b> <%= Html.Encode(String.Format("{0:p1}", item.PercentOfSubExpense)) %><br />
+                <b>From User:</b> <%= Html.Encode(item.FromUserName) %><br />
+                <b>ID:</b> <%= Html.Encode(item.ID) %><br />
+                <b>Status:</b> <%= Html.Encode(item.Status) %><br />
+                <b>To User:</b> <%= Html.Encode(item.ToUserName) %>
             </td>
         </tr>
         
@@ -150,74 +98,24 @@
       <h3>Transactions Receivable</h3>
 
     <table>
-            <th></th>
-            <th>
-                Amount
-            </th>
-            <th>
-                Date Of Expense
-            </th>
-            <th>
-                Expense Name
-            </th>
-            <th>
-                SubExpence Name
-            </th>
-            <th>
-                % of Expense
-            </th>
-            <th>
-                % of SubExpense
-            </th>
-            <th>
-                From UserName
-            </th>
-            <th>
-                ID
-            </th>
-            <th>
-                Status
-            </th>
-            <th>
-                To UserName
-            </th>
-        </tr>
 
     <% foreach (var item in Model.Payments) { %>
     
         <tr>
             <td>
-                <%= Html.ActionLink("View Expense", "Details", "Expense", new{id=item.ForExpense}, null) %>
+                <div data-role="button"><%= Html.ActionLink("View Expense", "Details", "Expense", new{id=item.ForExpense}, null) %></div>
             </td>
             <td>
-                <%= Html.Encode(String.Format("{0:C}", item.Amount)) %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:g}", item.DateOfExpense))%>
-            </td>
-            <td>
-                <%= Html.Encode(item.ForExpenseName) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.ForSubExpenceName) %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:p1}", item.PercentOfExpense)) %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:p1}", item.PercentOfSubExpense)) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.FromUserName) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.ID) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.Status) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.ToUserName) %>
+                <b>Amount:</b> <%= Html.Encode(String.Format("{0:C}", item.Amount)) %><br />
+                <b>Date of Expense:</b> <%= Html.Encode(String.Format("{0:g}", item.DateOfExpense))%><br />
+                <b>Expense Name:</b> <%= Html.Encode(item.ForExpenseName) %><br />
+                <b>SubExpense Name:</b> <%= Html.Encode(item.ForSubExpenceName) %><br />
+                <b>% of Expense:</b> <%= Html.Encode(String.Format("{0:p1}", item.PercentOfExpense)) %><br />
+                <b>% of SubExpense:</b> <%= Html.Encode(String.Format("{0:p1}", item.PercentOfSubExpense)) %><br />
+                <b>From User:</b> <%= Html.Encode(item.FromUserName) %><br />
+                <b>ID:</b> <%= Html.Encode(item.ID) %><br />
+                <b>Status:</b> <%= Html.Encode(item.Status) %><br />
+                <b>To User:</b> <%= Html.Encode(item.ToUserName) %>
             </td>
         </tr>
     
@@ -229,10 +127,7 @@
         Total: <%= String.Format("{0:C}",  Model.Payments.Sum(p => p.Amount)) %>
     </h6>
         
-    <p class="button">
-        <%= Html.ActionLink("Back To Transactions", "Index", "TransactionWindow") %>
-    </p>
-
+    <div data-role="button"><%= Html.ActionLink("Back To Transactions", "Index", "TransactionWindow") %></div>
 
 <%--<h2>Details</h2>
 
@@ -259,8 +154,5 @@
     
 </p>--%>
 
-</asp:Content>
-
-<asp:Content ID="Content3" ContentPlaceHolderID="HeaderContent" runat="server">
 </asp:Content>
 

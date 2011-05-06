@@ -38,7 +38,7 @@
     <% } %>
 
     <div>
-        <%= Html.ActionLink("Back to List", "Index") %>
+        <p class="button"><%= Html.ActionLink("Back to Users List", "Index") %></p>
     </div>
 
 </asp:Content>

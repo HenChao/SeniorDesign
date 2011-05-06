@@ -1,69 +1,64 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Mobile.Master" Inherits="System.Web.Mvc.ViewPage<ExpenceInfo>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Details
+    Details
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <h2>
+        About Expense #<%= Html.Encode(Model.ID) %>:
+        <%= Html.Encode(Model.Name) %></h2>
+    <h3>
+        Amount</h3>
+    <%= Html.Encode(String.Format("{0:F}", Model.Amount)) %>
+    <h3>
+        Date Entered</h3>
+    <%= Html.Encode(String.Format("{0:g}", Model.DateEntered)) %>
+    <h3>
+        Date Finalized</h3>
+    <%= Html.Encode(String.Format("{0:g}", Model.DateFinalized)) %>
+    <h3>
+        Date Of Expense</h3>
+    <%= Html.Encode(String.Format("{0:g}", Model.DateOfExpense)) %>
+    <h3>
+        Description</h3>
+    <%= Html.Encode(Model.Description) %>
+    <h3>
+        Part of GroupID</h3>
+    <%= Html.Encode(Model.GroupID) %>
+    <h3>
+        Expense ID</h3>
+    <%= Html.Encode(Model.ID) %>
+    <h3>
+        Name</h3>
+    <%= Html.Encode(Model.Name) %>
+    <h3>
+        Status</h3>
+    <%= Html.Encode(Model.Status) %>
+    <h3>
+        Created by UserID</h3>
+    <%= Html.Encode(Model.UserID) %>
+    <h3>
+        UsesASEPSA</h3>
+    <%= Html.Encode(Model.UsesASEPSA) %>
 
-    <h2>About this expense:</h2>
+    <% foreach (var img in Model.Images)
+       { %>
+    <%= Html.ActionLink("Image","Image", new{id=img}) %>
+    <img src="<%= Url.Action("Image", new{id=img}) %>" />
+    <% } %>
 
-    <fieldset>
-        <legend>Details</legend>
-        
-        <div class="display-label">Amount</div>
-        <p class="comment"><%= Html.Encode(String.Format("{0:F}", Model.Amount)) %></p>
-        
-        <div class="display-label">Date Entered</div>
-        <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateEntered)) %></p>
-        
-        <div class="display-label">Date Finalized</div>
-        <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateFinalized)) %></p>
-        
-        <div class="display-label">Date Of Expense</div>
-        <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateOfExpense)) %></p>
-        
-        <div class="display-label">Description</div>
-        <p class="comment"><%= Html.Encode(Model.Description) %></p>
-        
-        <div class="display-label">Part of GroupID</div>
-        <p class="comment"><%= Html.Encode(Model.GroupID) %></p>
-        
-        <div class="display-label">Expense ID</div>
-        <p class="comment"><%= Html.Encode(Model.ID) %></p>
-        
-        <div class="display-label">Name</div>
-        <p class="comment"><%= Html.Encode(Model.Name) %></p>
-        
-        <div class="display-label">Status</div>
-        <p class="comment"><%= Html.Encode(Model.Status) %></p>
-        
-        <div class="display-label">Created by UserID</div>
-        <p class="comment"><%= Html.Encode(Model.UserID) %></p>
-        
-        <div class="display-label">UsesASEPSA</div>
-        <p class="comment"><%= Html.Encode(Model.UsesASEPSA) %></p>
+    <% Html.RenderPartial("SubExpenseList", Model); %>
 
-        <% foreach (var img in Model.Images) { %>
-            <%= Html.ActionLink("Image","Image", new{id=img}) %>
-            <img src="<%= Url.Action("Image", new{id=img}) %>" />
-        <% } %>
-        
-        
-        <% Html.RenderPartial("SubExpenseList", Model); %>
+    <% if (Model.Status == 0)
+       { %>
+    <div data-role="button"><%= Html.ActionLink("Finalize", "Finalize", new { id = Model.ID /* id=Model.PrimaryKey */ })%></div>
+    <br />
+    <% }
+       else
+       { %>
+        <div data-role="button"><%= Html.ActionLink("Split", "SelectUsersForSplit", new { id = Model.ID, group = Model.GroupID })%></div>
+    <br />
+    <% } %>
 
-        
-        
-    </fieldset>
-    <p class="button">
-        <% if (Model.Status == 0)
-           { %>
-        <%= Html.ActionLink("Finalize", "Finalize", new { id = Model.ID /* id=Model.PrimaryKey */ })%> <br />
-        <% } else { %>
-        <%= Html.ActionLink("Split", "SelectUsersForSplit", new { id = Model.ID, group = Model.GroupID })%> <br />
-        <% } %>
-        <%= Html.ActionLink("Back to List", "Index") %>
-    </p>
-
+    <div data-role="button"><%= Html.ActionLink("Back to List", "Index") %></div>
 </asp:Content>
-

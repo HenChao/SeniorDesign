@@ -39,12 +39,6 @@
                 </th>
                 <th>
                     <a class="info" href="#">
-                       Description
-                       <span>Description of the expense</span>
-                    </a>
-                </th>
-                <th>
-                    <a class="info" href="#">
                        GroupID
                        <span>The group to which this expense belongs</span>
                     </a>
@@ -79,9 +73,6 @@
             </td>
             <td>
                 <p class="comment"><%= Html.Encode(String.Format("{0:g}", Model.DateOfExpense)) %></p>
-            </td>        
-            <td>
-                <p class="comment"><%= Html.Encode(Model.Description) %></p>
             </td>
             <td>
                 <p class="comment"><%= Html.Encode(Model.GroupID) %></p>
@@ -121,3 +112,11 @@
 
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="SideContent" runat="server">
+<div id="rightSide">
+    <h4>Description</h4>
+    <p>
+    <%= Html.Encode(Model.Description) %>
+    </p>
+</div>
+</asp:Content>

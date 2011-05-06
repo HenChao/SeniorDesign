@@ -18,34 +18,7 @@
             </th>
             <th></th>
             <th>
-                Name
-            </th>
-            <th>
-                Amount($)
-            </th>
-            <th>
-                Description
-            </th>
-            <th>
-                Date Entered
-            </th>
-            <th>
-                Date Finalized
-            </th>
-            <th>
-                Date Of Expense
-            </th>
-            <th>
-                GroupID
-            </th>
-            <th>
-                Status
-            </th>
-            <th>
-                UserID
-            </th>
-            <th>
-                UsesASEPSA
+                Details
             </th>
         </tr>
     
@@ -59,55 +32,16 @@
                 <div data-role="button" data-inline="true"><%= Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })%></p></div>
             </td>
             <td>
-                <%= Html.Encode(item.Name) %>
-            </td>
-            <td>
-                <%= Html.Encode(String.Format("{0:F}", item.Amount)) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.Description) %>
-            </td>
-            <td>
-                <% String[] s = String.Format("{0:g}", item.DateEntered).Split(' ');
-                   if (s.Length == 3)
-                   {%>
-                <%= Html.Encode(s[0])%>
-                <br />
-                <%= Html.Encode(s[1])%>
-                <%= Html.Encode(s[2])%>
-                <% }%>
-            </td>
-            <td>
-                <%  s = String.Format("{0:g}", item.DateFinalized).Split(' ');
-                    if (s.Length == 3)
-                   {%>
-                <%= Html.Encode(s[0]) %>
-                <br />
-                <%= Html.Encode(s[1]) %>
-                <%= Html.Encode(s[2]) %>
-                <% }%>
-            </td>
-            <td>
-                <%  s = String.Format("{0:g}", item.DateOfExpense).Split(' ');
-                    if (s.Length == 3)
-                   {%>
-                <%= Html.Encode(s[0]) %>
-                <br />
-                <%= Html.Encode(s[1]) %>
-                <%= Html.Encode(s[2]) %>
-                <% }%>
-            </td>
-            <td>
-                <%= Html.Encode(item.GroupID) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.Status) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.UserID) %>
-            </td>
-            <td>
-                <%= Html.Encode(item.UsesASEPSA) %>
+                <b>Name:</b> <%= Html.Encode(item.Name) %><br />
+                <b>Amount:</b> <%= Html.Encode(String.Format("{0:F}", item.Amount)) %><br />
+                <b>Description:</b> <%= Html.Encode(item.Description) %><br />
+                <b>Date Entered:</b> <%= Html.Encode(item.DateEntered)%><br />
+                <b>Date Finalized:</b> <%= Html.Encode(item.DateFinalized)%><br />
+                <b>Date of Expense:</b> <%= Html.Encode(item.DateOfExpense)%><br />
+                <b>GroupID:</b> <%= Html.Encode(item.GroupID) %><br />
+                <b>Status:</b> <%= Html.Encode(item.Status) %><br />
+                <b>UserID:</b> <%= Html.Encode(item.UserID) %><br />
+                <b>UsesASEPSA?:</b> <%= Html.Encode(item.UsesASEPSA) %><br />
             </td>
         </tr>
     </table>

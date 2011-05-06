@@ -36,5 +36,16 @@
         User accounts are current available on an invitation-only basis. In a later release of the website, we hope to eventually
         support beta user accounts.
     </p>
+</asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="SideContent" runat="server">
+    <div id="rightSide" style="text-align:center">
+        <h4>What Are People Saying About CostSplit?</h4>
+        <br />
+        <img src="~/Content/images/reviews/neuyork.jpg" runat="server" style="width: 150px"/>
+        <br />
+        <img src="~/Content/images/reviews/seanet.jpg" runat="server" style="width: 150px"/>
+        <br />
+        <img src="~/Content/images/reviews/semantics.jpg" runat="server" style="width: 150px"/>
+    </div>
 </asp:Content>

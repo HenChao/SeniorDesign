@@ -26,9 +26,9 @@
     
         <tr>
             <td>
-                <%= Html.ActionLink("Revoke", "Delete", new {id=Model.UserID, group = item.GroupID, data = item.Permission /* id=item.PrimaryKey */ })%>
+                <p class="smallbutton"><%= Html.ActionLink("Revoke", "Delete", new {id=Model.UserID, group = item.GroupID, data = item.Permission /* id=item.PrimaryKey */ })%></p>
             </td>
-            <td>
+            <td style="text-align: center; font-size:x-large;">
                 <%= Html.Encode(item.GroupID) %>
             </td>
             <td>
@@ -43,9 +43,11 @@
 
     </table>
 
-    <p>
-        <%= Html.ActionLink("Create New", "Create", new { id = Model.UserID })%>
-    </p>
+    <div>
+        <p class="button"><%= Html.ActionLink("Add Permission", "Create", new { id = Model.UserID })%></p>
+
+        <p class="button"><%= Html.ActionLink("Back to Users List", "Index") %></p>
+    </div>
 
 </asp:Content>
 

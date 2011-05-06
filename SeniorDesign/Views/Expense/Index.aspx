@@ -59,7 +59,13 @@
             <th>
                 <a class="info" href="#">
                     Status
-                    <span>The status of this expense: 0 indicates... while 1 indicates...</span>
+                    <span>The status of this expense:
+                        <br />0: Issued 
+                        <br />1: Accepted
+                        <br />2: Rejected
+                        <br />3: Revoked
+                        <br />4: Refunded
+                    </span>
                 </a>
             </th>
             <th>
@@ -70,8 +76,8 @@
             </th>
             <th>
                 <a class="info" href="#">
-                    UsesASEPSA
-                    <span>If there is ASEPSA data associated with this expense</span>
+                    UsesASEPSA?
+                    <span>Indicates if CostSplit has already detected and handled the tax and/or tip associated with this expense</span>
                 </a>
             </th>
         </tr>

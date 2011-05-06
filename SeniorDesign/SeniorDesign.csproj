@@ -97,6 +97,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\CSLogoMobile.png" />
+    <Content Include="Content\images\reviews\neuyork.jpg" />
+    <Content Include="Content\images\reviews\seanet.jpg" />
+    <Content Include="Content\images\reviews\semantics.jpg" />
+    <Content Include="Content\images\rulost.jpg" />
     <Content Include="Content\Mobile.css" />
     <Content Include="Content\images\CSLogo.png" />
     <Content Include="Content\images\primary.png" />
@@ -153,6 +157,7 @@
     <Content Include="Views\Permission\Mobile\Create.aspx" />
     <Content Include="Views\Permission\Mobile\Delete.aspx" />
     <Content Include="Views\Permission\Mobile\Index.aspx" />
+    <Content Include="Views\Shared\MobileLoginControl.ascx" />
     <Content Include="Views\Shared\UserTabsControl.ascx" />
     <Content Include="Views\SubExpense\Create.aspx" />
     <Content Include="Views\SubExpense\Delete.aspx" />
